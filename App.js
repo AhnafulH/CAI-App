@@ -4,12 +4,12 @@ import { StyleSheet, Text, SafeAreaView, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import BottomTab from './navigation/BottomTab';
 import StackNav from './navigation/StackNav';
+import React from "react";
 
 
 export default function App() {
   return (
       <NavigationContainer>
-        <BottomTab/>
         <StackNav/>
       </NavigationContainer>
   
