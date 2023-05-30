@@ -5,7 +5,7 @@ import { StyleSheet, TouchableOpacity } from 'react-native';
 import { FAB } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native'
 import AddFleetScreen from '../screens/AddFleetScreen';
-const FloatingBar = () => {
+const FloatingBar = ({onPress}) => {
   const navigation = useNavigation()
   return (
     <View style={styles.container}>
@@ -14,7 +14,7 @@ const FloatingBar = () => {
         small
         icon="plus"
         placement="right"
-        onPress={() => navigation.navigate('Add Fleet')}
+        onPress={onPress}
         />
       
       

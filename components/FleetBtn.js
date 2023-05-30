@@ -1,11 +1,11 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const FleetBtn = () => {
+const FleetBtn = ({text}) => {
   return (
     <TouchableOpacity style={styles.container}>
         <View style={styles.box}>
-            <Text style={styles.text}> This is a test</Text>
+            <Text style={styles.text}> {text}</Text>
         </View>
     </TouchableOpacity>
     

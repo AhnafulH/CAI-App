@@ -13,7 +13,7 @@ const Stack = createStackNavigator();
 export const StackNav = () => {
   return (
     <Stack.Navigator>
-        <Stack.Screen name='Home' component={BottomTab} 
+        <Stack.Screen name='Fleet' component={BottomTab} 
             options={{ headerShown: false }}
         />
         <Stack.Screen name='Add Fleet' component={AddFleetScreen} />

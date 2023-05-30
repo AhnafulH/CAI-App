@@ -1,24 +1,33 @@
-import { SafeAreaView, Text, FlatList, scr, View, StyleSheet } from 'react-native'
-import React from 'react'
+import { SafeAreaView, Text, FlatList, scr, View, StyleSheet, TouchableOpacity } from 'react-native'
+import React, {useState} from 'react'
 import FleetBtn from '../components/FleetBtn'
 import FloatingBar from '../components/FloatingBar'
 import AddFleetScreen from './AddFleetScreen'
 import { useNavigation } from '@react-navigation/native'
+import { useRoute } from '@react-navigation/native';
+//import { Item } from 'react-native-paper/lib/typescript/src/components/Drawer/Drawer'
+
 const FleetScreen = () => {
   const navigation = useNavigation();
+  const route = useRoute();
+  const [fleetNames, setFleetNames] = useState([]);
+  const handleAddFleet = () => {
+    navigation.navigate("Add Fleet", {setFleetNames});
+    /*navigation.setOptions({ setFleetNames });
+    navigation.navigate('Add Fleet');*/
 
-  const handleFloatingBarPress = () => {
-    navigation.navigate("AddFleetScreen");
-  }
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <FleetBtn/>
-        <FleetBtn/>
-        <FleetBtn/>
+        {
+          fleetNames.map((item, index) => {
+            return <FleetBtn key={index} text={item} />
+          })
+        }
       </View>
-      <FloatingBar/>
-      
+      <FloatingBar onPress={handleAddFleet}/>    
       
     </SafeAreaView>
       
