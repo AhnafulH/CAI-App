@@ -15,7 +15,7 @@ const AddFleetScreen = () => {
       //setFleetNames((prevFleetNames) => [...prevFleetNames, fleetName]);
       //navigation.goBack();
       setFleetNames((prevFleetNames) => [...prevFleetNames, fleetName]);
-      navigation.goBack();
+      navigation.navigate('Fleet');
   };
 
   return (

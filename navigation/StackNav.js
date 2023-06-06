@@ -6,6 +6,7 @@ import AddFleetScreen from '../screens/AddFleetScreen';
 import BottomTab from './BottomTab';
 import EquipmentScreen from '../screens/EquipmentScreen';
 import EventScreen from '../screens/EventScreen';
+import FleetDetailScreen from '../screens/FleetDetailScreen';
 
 const Stack = createStackNavigator();
 
@@ -17,6 +18,10 @@ export const StackNav = () => {
             options={{ headerShown: false }}
         />
         <Stack.Screen name='Add Fleet' component={AddFleetScreen} />
+        <Stack.Screen name='Fleet Detail' component={FleetDetailScreen} 
+          /*options={({route})} => {(
+            title: route.params.fleetItems,
+        )}*/ />
     </Stack.Navigator>
   );
 }

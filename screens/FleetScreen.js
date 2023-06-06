@@ -18,14 +18,19 @@ const FleetScreen = () => {
 
   };
 
+  const handleFleetPress = (fleetName) => {
+    navigation.navigate("Fleet Detail");
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View>
         {
           fleetNames.map((item, index) => {
-            return <FleetBtn key={index} text={item} />
+            return <FleetBtn key={index} text={item} onPress={handleFleetPress}/>
           })
         }
+        <FleetBtn text={"Ahnaful"} onPress={handleFleetPress}/>
       </View>
       <FloatingBar onPress={handleAddFleet}/>    
       
