@@ -30,7 +30,7 @@ const FleetScreen = () => {
             return <FleetBtn key={index} text={item} onPress={handleFleetPress}/>
           })
         }
-        <FleetBtn text={"Ahnaful"} onPress={handleFleetPress}/>
+        <FleetBtn text={"Fleet Name"} onPress={handleFleetPress}/>
       </View>
       <FloatingBar onPress={handleAddFleet}/>    
       

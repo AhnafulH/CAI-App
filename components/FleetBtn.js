@@ -29,11 +29,18 @@ const styles = StyleSheet.create({
     },
     box: {
       flex: 1,
-      backgroundColor: '#DDDDDD',
-      justifyContent: 'flex-start',
+      backgroundColor:'#FFFFF0',
+      justifyContent: 'center',
       alignItems: 'flex start',
       borderRadius: '20',
-      padding: 10
+      padding: 10,
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 5,
     },
     text: {
       color: 'black',
